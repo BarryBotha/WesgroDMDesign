@@ -915,6 +915,7 @@ a.view-listing {
 	clear: both;
 	position: relative;
 	margin-right: auto;
+	max-width:1050px;
 }
 #main-content .inh {
 	padding: 11px;
