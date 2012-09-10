@@ -1796,89 +1796,102 @@ width: 900px;
 	height: 18px;
 	z-index: 99999;
 }
-/*General Accordion*/
 
 
-/*Level 1*/
-	ul#accordion li {
+
+
+
+
+
+/*Accordion*/
+.accordion, .accordion ul, .accordion li, .accordion a, .accordion span {
 	margin: 0;
 	padding: 0;
+	border: none;
+	outline: none;
+}
+.accordion li {
 	list-style: none;
-	background-color: #E3E3E3;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #FFF;
-	}
-	ul#accordion li a {
+}
+
+.accordion li > a {
 	display: block;
-	color: #FFF;
-	padding-top: 8px;
-	padding-bottom: 8px;
-	padding-left: 15px;
-	}
-	
-		#accordion li {
-	width: 95%;
-		}
-#accordion li a{
-			color:#FFF;
-		}
-		
-		
-		
-		/* Second Level UL List*/
-		#accordion ul {
-			
-			width:268px;
-			margin:0;
-			padding:0;
-			display:none;	
-		}
-		
-			#accordion ul li {
-				height:30px;
-				list-style: none;
-			}
-			
-			/* styling of submenu item */
-			#accordion ul li a {
-				width:240px;
-				height:25px;
-				margin-left:15px;
-				padding-top:5px;
-				text-indent:0;
-				text-decoration:none;
-				background-color: #CCC;
-			}
-
-			/* remove border bottom of the last item */
-			#accordion ul li a.last {
-				border-bottom: none;
-			}
-
-
-
-		ul#accordion li a {
-	color: #0B5B9B;
-	font-size: 18px;
-	font-weight: bold;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-	border-bottom-color: #FFF;
+	position: relative;
+	min-width: 110px;
+	padding: 0 10px 0 40px;
+	height: 32px;
+	color: #666;
+	font: bold 12px/32px Arial, sans-serif;
 	text-decoration: none;
-		}
-#accordion  {
-	margin: 0px;
-	padding: 0px;
+	background-color: #E3E3E3;
+}
+.accordion > li:hover > a, .accordion > li:target > a, .accordion > li > a.active {
+	color: #333;
+	background: #61A440;
+}
+.accordion li > a span {
+	display: block;
+	position: absolute;
+	top: 7px;
+	right: 0;
+	padding: 0 10px;
+	margin-right: 10px;
+	font: normal bold 12px/18px Arial, sans-serif;
+	background: #404247;
+}
+.accordion > li:hover > a span, .accordion > li:target > a span, .accordion > li > a.active span {
+	color: #fdfdfd;
+	text-shadow: 0px 1px 0px rgba(0,0,0, .35);
+	background: #3e5706;
+}
+/* Images */
+
+.accordion > li > a:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: '';
+	width: 24px;
+	height: 24px;
+	margin: 4px 8px;
+}
+/* Sub Menu */
+
+.sub-menu li a {
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	background-color: #CCC;
+	border-bottom: 1px solid #c9c9c9;
+}
+.sub-menu li:hover a {
+	background: #efefef;
+}
+.sub-menu li:last-child a {
+	border: none;
+}
+.sub-menu li > a span {
+	color: #797979;
+	text-shadow: 1px 1px 0px rgba(255,255,255, .2);
+	background: transparent;
+	border: 1px solid #c9c9c9;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+.sub-menu em {
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 14px;
+	color: #a6a6a6;
+	font: normal 10px/32px Arial, sans-serif;
+}
+/* Functionality */
+
+.accordion li > .sub-menu {
+	display: none;
+}
+.accordion li:target > .sub-menu {
+	display: block;
 }
 
-
-
-
-
-#main-content .inh #data {
-	margin-top: 18px;
-	margin-bottom: 25px;
-	clear: both;
-	margin-left: 22px;
-}

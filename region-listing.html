@@ -14,6 +14,8 @@
 <!-- Desktop -->
 <link href="css/dm-style.css" rel="stylesheet" type="text/css" media="only screen and (min-width:996px)">
 </head>
+
+
 <body>
 <div class="top-bar"></div>
 <div id="container">
@@ -63,30 +65,99 @@
       </div>
       <div id="data">
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nunc  turpis, vestibulum aliquam aliquet id, porttitor eu enim. Integer lectus  diam, facilisis et luctus a.</h2>
-        <ul id="accordion">
-          <li> <a href="#" class="item" rel="">Cape Town</a>
-            <ul>
-              <li><a href="#">Town</a></li>
-              <li><a href="#">Town</a></li>
-              <li><a href="#" class="last">Town</a></li>
-            </ul>
-          </li>
-          <li> <a href="#" class="item" rel="">Winelands</a>
-            <ul>
-              <li><a href="#">Town</a></li>
-              <li><a href="#">Town</a></li>
-              <li><a href="#" class="last">Town</a></li>
-            </ul>
-          </li>
-          <li> <a href="#" class="item" rel="">West Coast</a>
-            <ul>
-              <li><a href="#">Town</a></li>
-              <li><a href="#">Town</a></li>
-              <li><a href="#" class="last">Town</a></li>
-            </ul>
-          </li>
+
+        <ul class="accordion">
+      
+      <li>
+
+        <a href="#">Cape Town</a>
+
+        <ul class="sub-menu">
+          
+          <li><a href="#">Town1</a></li>
+          <li><a href="#">Town2</a></li>
+          <li><a href="#">Town3</a></li>
+          <li><a href="#">Town4</a></li>
+
         </ul>
-      </div>
+
+      </li>
+      
+      <li>
+
+        <a href="#">Winelands</a>
+
+        <ul class="sub-menu">
+          
+          <li><a href="#">Town1</a></li>
+          <li><a href="#">Town2</a></li>
+          <li><a href="#">Town3</a></li>
+          <li><a href="#">Town4</a></li>
+
+        </ul>
+
+      </li>
+      
+      <li>
+
+        <a href="#">West Coast</a>
+
+        <ul class="sub-menu">
+          
+          <li><a href="#">Town1</a></li>
+          <li><a href="#">Town2</a></li>
+          <li><a href="#">Town3</a></li>
+          <li><a href="#">Town4</a></li>
+
+        </ul>
+
+      </li>
+      
+      <li>
+
+        <a href="#">Overberg</a>
+
+        <ul class="sub-menu">
+          
+          <li><a href="#">Town1</a></li>
+          <li><a href="#">Town2</a></li>
+          <li><a href="#">Town3</a></li>
+          <li><a href="#">Town4</a></li>
+
+        </ul>
+
+      </li>
+      <li>
+
+        <a href="#">Karoo</a>
+
+        <ul class="sub-menu">
+          
+          <li><a href="#">Town1</a></li>
+          <li><a href="#">Town2</a></li>
+          <li><a href="#">Town3</a></li>
+          <li><a href="#">Town4</a></li>
+
+        </ul>
+
+      </li>
+      <li>
+
+        <a href="#">Garden Route & Klein 
+Karoo</a>
+
+        <ul class="sub-menu">
+          
+          <li><a href="#">Town1</a></li>
+          <li><a href="#">Town2</a></li>
+          <li><a href="#">Town3</a></li>
+          <li><a href="#">Town4</a></li>
+
+        </ul>
+
+      </li>
+    </ul>
+</div>
       <div class="town"></div>
     </div>
   </div>
@@ -142,28 +213,42 @@
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
  
-  <script>
-  
-  $(document).ready(function () {
-    
-    $('#accordion a.item').click(function () {
-
-      //slideup or hide all the Submenu
-      $('#accordion li').children('ul').slideUp('fast');  
-
-      //show the selected submenu
-      $(this).siblings('ul').slideDown('fast');
-      
-      return false;
-
+    $(document).ready(function() {
+ 
+        // Store variables
+ 
+        var accordion_head = $('.accordion > li > a'),
+            accordion_body = $('.accordion li > .sub-menu');
+ 
+        // Open the first tab on load
+ 
+accordion_head.first().addClass('active').next().slideDown('fast');
+ 
+        // Click function
+ 
+        accordion_head.on('click', function(event) {
+ 
+            // Disable header links
+ 
+            event.preventDefault();
+ 
+            // Show and hide the tabs on click
+ 
+            if ($(this).attr('class') != 'active'){
+                accordion_body.slideUp('normal');
+                $(this).next().stop(true,true).slideToggle('fast');
+                accordion_head.removeClass('active');
+                $(this).addClass('active');
+            }
+ 
+        });
+ 
     });
-  
-  });
-  
-  </script>
-
+ 
+</script>
 
 </body>
 </html>

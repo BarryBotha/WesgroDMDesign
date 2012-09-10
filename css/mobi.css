@@ -213,7 +213,7 @@ header nav #big-nav .oswald a:hover {
 	margin-left: 0px;
 	font-weight: normal;
 	color: #61A440;
-	font-size: 23px;
+	font-size: 18px;
 }
 #main-content .inh #detail .social {
 	display: none;
@@ -256,7 +256,7 @@ header nav #big-nav .oswald a:hover {
 #main-content h1 span {
 	text-decoration: none;
 	font-family: Oswald;
-	font-size: 20px;
+	font-size: 18px;
 	background-image: url(../img/dm/h1-re-bg.png);
 	font-weight: normal;
 	-moz-border-radius: 16px;
