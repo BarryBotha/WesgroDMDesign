@@ -613,3 +613,6 @@ header nav #main-nav {
 #enter-options .desc {
 	padding-bottom: 8px;
 }
+.encapsu #man-logo {
+	display:none;
+}

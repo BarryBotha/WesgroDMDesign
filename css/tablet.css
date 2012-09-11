@@ -325,3 +325,6 @@ header nav #main-nav a.conven {
 	padding-left: 0px;
 	text-shadow: hsl(0,0%,1%) 1px 1px, hsl(0,0%,1%) 2px 2px;
 }
+.encapsu #man-logo {
+	display:none;
+}
