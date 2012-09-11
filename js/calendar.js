@@ -142,7 +142,7 @@ var FbCalendar = {
 		if (type & FbCalendar.SINGLE) style = 'fb-single';
 		
     var output = '' +
-      '<iframe class="fb-iframe" id="' + id + '_cal_iframe' + '" src="iframe_dummy.html" frameborder="0" style="display:none;"></iframe>' + 
+      '<iframe class="fb-iframe" id="' + id + '_cal_iframe' + '" src="iframe_dummy.html" frame style="display:none;"></iframe>' + 
       '<div class="fb-container" style="display:none" id="' + id + '_container"' +
       mouseOverStr + mouseOutStr + mouseClickStr + '>' +
       '<div class="fb-calendar ' + style + '" style="background-color:' + FbCalendar.borderColor + '" id="' + id + '_calendar">' +
@@ -288,7 +288,7 @@ var FbCalendar = {
             this.currentMonth + 1, this.currentYear, 1, FbCalendar.NEXT_ONLY
           ); 
           
-          //div.innerHTML += leftTable + '<div class="fb-divider"><img src="images/spacerTrans.gif"/></div>' + rightTable;  
+          //div.innerHTML += leftTable + '<div class="fb-divider"><img alt="WESGRO" src="images/spacerTrans.gif"/></div>' + rightTable;  
 		  div.innerHTML += leftTable + rightTable;  
           
         } else { 

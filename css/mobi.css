@@ -213,7 +213,7 @@ header nav #big-nav .oswald a:hover {
 	margin-left: 0px;
 	font-weight: normal;
 	color: #61A440;
-	font-size: 18px;
+	font-size: 23px;
 }
 #main-content .inh #detail .social {
 	display: none;
@@ -256,7 +256,7 @@ header nav #big-nav .oswald a:hover {
 #main-content h1 span {
 	text-decoration: none;
 	font-family: Oswald;
-	font-size: 18px;
+	font-size: 20px;
 	background-image: url(../img/dm/h1-re-bg.png);
 	font-weight: normal;
 	-moz-border-radius: 16px;
@@ -415,7 +415,7 @@ header nav #main-nav {
 	left: 10px;
 	top: 155px;
 	width: 86%;
-	height: 248px;
+	height: 265px;
 	padding: 12px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
@@ -608,7 +608,7 @@ header nav #main-nav {
 	padding-bottom: 0px;
 	padding-left: 0px;
 	text-shadow: hsl(0,0%,1%) 1px 1px, hsl(0,0%,1%) 1px 2px;
-	line-height:100%;
+	line-height: 100%;
 }
 #enter-options .desc {
 	padding-bottom: 8px;
