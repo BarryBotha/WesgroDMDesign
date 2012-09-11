@@ -12,6 +12,7 @@
 <link href="css/tablet.css" rel="stylesheet" type="text/css" media="only screen and (min-width:768px) and (max-width:996px)">
 <!-- Desktop -->
 <link href="css/dm-style.css" rel="stylesheet" type="text/css" media="only screen and (min-width:996px)">
+<script src="js/libs/modernizr-2.0.6.min.js"></script>
 </head>
 <body style="background-image:none;">
 <div class="top-bar"></div>
@@ -142,5 +143,18 @@ All rights reserved.</p>
   <!--<div class="hero-info"><img src="img/dm/footnote.png" width="232" height="83"></div> -->
   <div id="main" role="main"></div>
 </div>
+<script>
+  window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
+  Modernizr.load({
+    load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
+  });
+</script> 
+<script src="js/plugins.js"></script> 
+<script src="js/script.js"></script> 
+<!--[if lt IE 7 ]>
+  <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+  <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+<![endif]-->
+
 </body>
 </html>
